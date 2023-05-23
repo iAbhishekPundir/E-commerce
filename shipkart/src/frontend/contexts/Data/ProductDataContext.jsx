@@ -14,6 +14,7 @@ export const ProductDataProvider = ( {children}) => {
             dispatch({type:"INITIALIZE_CATEGORIES", payload: categories})
         } catch (error) {
             console.log(error);
+            dispatch({ type: "FETCH_ERROR", payload: error});
         }
     }
 
@@ -25,6 +26,7 @@ export const ProductDataProvider = ( {children}) => {
             dispatch({type:"INITIALIZE_PRODUCTS", payload: products})
         } catch (error) {
             console.log(error);
+            dispatch({ type: "FETCH_ERROR", payload: error});
         }
     }
 
@@ -40,6 +42,7 @@ export const ProductDataProvider = ( {children}) => {
             console.log(data.cart);
         } catch (error) {
             console.log(error);
+            dispatch({ type: "FETCH_ERROR", payload: error});
         }
     }
 

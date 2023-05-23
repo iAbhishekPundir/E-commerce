@@ -22,9 +22,11 @@ export const productReducer = (state, action) => {
 
         case "INITIALIZE_CATEGORIES":
             console.log(action.payload);
-            return {...state, categories: action.payload}
+            return {...state, isLoading: false,  categories: action.payload};
         case "INITIALIZE_PRODUCTS":
             console.log(action.payload);
-            return {...state, products: action.payload}
+            return {...state, isLoading: false, products: action.payload};
+        case "FETCH_ERROR":
+            return { ...state, isLoading: false, error: action.payload };
     }
 }
