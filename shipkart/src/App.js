@@ -2,13 +2,15 @@ import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
 import Mockman from "mockman-js";
-import { Landing } from "./Landing";
+import { Header } from "./frontend/components/Header/Header";
+import { Home } from "./frontend/pages/Home/Home";
+
 function App() {
   return (
     <>
-      <h1>Header</h1>
+      <Header />
       <Routes>
-        <Route path="/" element={<Landing/ >} />
+        <Route path="/" element={<Home/>} />
         <Route path="/mockman" element={<Mockman />} />
       </Routes>
     </>
