@@ -26,5 +26,7 @@ export const productReducer = (state, action) => {
       return { ...state, isLoading: false, products: action.payload };
     case "FETCH_ERROR":
       return { ...state, isLoading: false, error: action.payload };
+    default:
+      throw new Error(`Unhandled action type: ${action.type}`);
   }
 };
