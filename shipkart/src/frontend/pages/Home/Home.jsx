@@ -1,5 +1,6 @@
 import React from "react";
 import { ProductListing } from "../ProductListing/ProductListing";
+import { CategoriesListing } from "../CategoriesListing/CategoriesListing";
 
 export const Home = () => {
   const getData = async () => {
@@ -24,7 +25,8 @@ export const Home = () => {
   return (
     <>
       <div onClick={getData}>Home Page for E-commerce</div>
-      <ProductListing />
+      <CategoriesListing />
+      {/* <ProductListing /> */}
     </>
   );
 };
