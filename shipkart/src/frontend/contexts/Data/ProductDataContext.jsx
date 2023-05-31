@@ -10,8 +10,8 @@ export const ProductDataProvider = ( {children}) => {
         try {
             const response = await fetch("/api/categories");
             const {categories} = await response.json();
-            console.log(categories);
-            dispatch({type:"INITIALIZE_CATEGORIES", payload: categories})
+            // console.log(categories);
+            dispatch({type:"INITIALIZE_CATEGORIES", payload: categories});
         } catch (error) {
             console.log(error);
             dispatch({ type: "FETCH_ERROR", payload: error});
