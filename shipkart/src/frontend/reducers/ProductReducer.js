@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 export const initialState = {
   isLoading: true,
   error: null,
@@ -16,6 +16,7 @@ export const initialState = {
     byStock: true,
   },
 };
+
 export const productReducer = (state, action) => {
   switch (action.type) {
     case "INITIALIZE_CATEGORIES":
@@ -26,6 +27,10 @@ export const productReducer = (state, action) => {
       return { ...state, isLoading: false, products: action.payload };
     case "FETCH_ERROR":
       return { ...state, isLoading: false, error: action.payload };
+    case "ADD_TO_CART":
+      const addedProduct = state.products.find((product)=> product.id === action.payload);
+      console.log(addedProduct);
+      return {...state, cart: addedProduct}
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
   }
