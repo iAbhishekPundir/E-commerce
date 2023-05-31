@@ -6,6 +6,7 @@ import cover from "../CategoriesListing/cover.png";
 
 export const CategoriesListing = () => {
   const { state } = useContext(ProductDataContext);
+  console.log(state.categories);
   return (
     <>
       <section className="category-container ">
@@ -29,7 +30,7 @@ export const CategoriesListing = () => {
             <p>SHOP BY CATEGORY</p>
         </div>
       <div className="category-card-container">
-        {state.categories.map((category) => (
+        {state?.categories?.map((category) => (
           <CategoryCard category={category} />
         ))}
       </div>
