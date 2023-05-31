@@ -28,13 +28,13 @@
   margin:1rem;
 }
 .shop-by-category-div {
-  background-color: rgb(250 204 21);
+  background-color: #0284c7;
   border: none;
   border-radius: 5px;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 14px 20px;
   width: 93vw;
   text-align: center;
   margin: 1rem auto;

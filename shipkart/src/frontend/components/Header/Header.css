@@ -1,0 +1,138 @@
+body {
+    font-family: Poppins, sans-serif;
+}
+.header-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #9a9a9a;
+    gap: 1rem;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+*{
+    text-decoration: none;
+}
+.header-search {
+    border: 1px solid #9A9A9A;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    width: 421px;
+}
+.header-search i.material-symbols-outlined {
+    font-size: 1.2rem;
+}
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.header-search input {
+    outline: none;
+    border: none;
+}
+input[type="text" i] {
+    padding: 1px 2px;
+}
+input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+.header-profile {
+    gap: 2rem;
+}
+.header-profile {
+    display: flex;
+    align-items: center;
+    color: #9a9a9a;
+}
+.header-profile .login-button {
+    background: #9A9A9A;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    color: #fff;
+    border: none;
+}
+.header-badge {
+    position: relative;
+}
+.header-badge div {
+    background-color: red;
+    color: #fff;
+    border-radius: 999px;
+    justify-content: center;
+    font-size: .8rem;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%,-50%);
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.header-cart, .header-badge div {
+    display: flex;
+    align-items: center;
+    color: #9a9a9a;
+    gap: 1rem;
+}
+.header-cart, .header-cart label {
+    cursor: pointer;
+}
+.header-badge div {
+    background-color: red;
+    color: #fff;
+    border-radius: 999px;
+    justify-content: center;
+    font-size: .8rem;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%,-50%);
+}

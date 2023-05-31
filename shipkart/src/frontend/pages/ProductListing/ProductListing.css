@@ -1,3 +1,5 @@
-.container {
+.product-card-container {
     display: flex;
-}
+    justify-content: space-around;
+    margin: 2rem 0;
+  }
