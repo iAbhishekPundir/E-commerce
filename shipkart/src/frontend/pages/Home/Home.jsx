@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductListing } from "../ProductListing/ProductListing";
 import { CategoriesListing } from "../CategoriesListing/CategoriesListing";
+import Sidebar from "../Sidebar/Sidebar";
 
 export const Home = () => {
   const getData = async () => {
@@ -25,7 +26,8 @@ export const Home = () => {
   return (
     <>
       <div onClick={getData}>Home Page for E-commerce</div>
-      <CategoriesListing />
+      <Sidebar />
+      {/* <CategoriesListing /> */}
       {/* <ProductListing /> */}
     </>
   );
