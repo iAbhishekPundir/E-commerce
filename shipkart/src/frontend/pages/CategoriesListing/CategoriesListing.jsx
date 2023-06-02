@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ProductDataContext } from "../../contexts/Data/ProductDataContext";
 import "./CategoriesListing.css";
-import { CategoryCard } from "../../components/CategoryCard/CategoryCard";
+import { CategoryCard } from "../../components/Categories/CategoryCard";
 import cover from "../CategoriesListing/cover.png";
 
 export const CategoriesListing = () => {

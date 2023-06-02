@@ -2,7 +2,7 @@
 
 import { Routes, Route } from "react-router-dom";
 import Mockman from "mockman-js";
-import { Header } from "./frontend/components/Header/Header";
+import { Navbar } from "./frontend/components/Navbar/Navbar";
 import { Home } from "./frontend/pages/Home/Home";
 import { ProductListing } from "./frontend/pages/ProductListing/ProductListing";
 import { CategoriesListing } from "./frontend/pages/CategoriesListing/CategoriesListing";
@@ -15,7 +15,7 @@ import { Footer } from "./frontend/pages/Footer/Footer";
 function App() {
   return (
     <>
-      <Header />
+      <Navbar />
       {/* <SignIn /> */}
       <Routes>
         <Route path="/" element={<Home/>} />
