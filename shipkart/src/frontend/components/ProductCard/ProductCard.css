@@ -1,11 +1,11 @@
-.product-card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+#card:hover{
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.4);
 }
 .card-header {
     position: relative;
 }
 .trending {
-    background-color: #fb923c;
+    background-color: #fbbf24;
     border-radius: .1rem;
     color: #fff;
     font-size: .9rem;
@@ -14,7 +14,20 @@
     right: 0;
 }
 .prod-size {
-    background-color: #fb923c;
+    background-color: #3b82f6;
+    border-radius: .1rem;
+    bottom: 0px;
+    color: #fff;
+    right: 0;
+    padding: .2rem .4rem;
+    position: absolute;
+}
+.prod-rating::after {
+    content: "\2605";
+}
+.prod-rating {
+    background-color: #3b82f6;
+    border-radius: .1rem;
     bottom: 0px;
     color: #fff;
     left: 0;
@@ -24,11 +37,17 @@
 #card-content {
     margin: 0.1rem;
     padding: 0.1rem;
+    /* text-align: center; */
 }
-.title-div{
-    font-size: 0.85rem;
+#title-align {
+    display: flex;
+    justify-content: space-between;
+}
+.title-span{
+    font-size: 0.90rem;
     font-weight: 500;
     color: #64748b;
+    margin: 0.2rem;
 }
 
 
@@ -36,29 +55,44 @@
     
 }
 .new-price {
+    font-size: 1rem;
     font-weight: bold;
     color: #0f172a;
 }
 .old-price {
+    font-size: 0.9rem;
     margin-left: 8px;
     color: #999;
     text-decoration: line-through;
 }
+.product-card-discount {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #22c55e;
+    margin-left: 0.5rem;
+}
+#card-actions {
+    margin: 2px;
+    padding: 2px;
+}
 #wishlisted-btn {
-    bottom: 10px;
-    color: red;
-    right: 0;
-    position: absolute;
-    padding: 0.1rem;
-    margin: 0;
+    bottom: 0px;
+    color: tomato;
+    right: 2px;
+    padding: 1px;
 }
 #wishlist-btn {
-    bottom: 10px;
+    bottom: 0px;
     color: gray;
-    right: 0;
-    position: absolute;
-    padding: 0.1rem;
-    margin: 0;
+    right: 2px;
+    padding: 1px;
+
 }
-
-
+#cart-btn {
+    min-width: 100%;
+    padding: 3px 33px;
+}
+#btn-cart-added {
+    min-width: 186px;
+    padding: 3px 33px;
+}
