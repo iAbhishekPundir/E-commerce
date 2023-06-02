@@ -28,10 +28,10 @@ export const ProductListing = () => {
   return (
     <>
     {
-        state.products && 
+        state?.products && 
             <Grid container >
             {
-                state.products.map((product)=>(
+                state?.products.map((product)=>(
                     <Grid item xs={12} sm={6} md={4} lg={2} key={product.id}>
                         <ProductCard product={product}/>
                     </Grid>

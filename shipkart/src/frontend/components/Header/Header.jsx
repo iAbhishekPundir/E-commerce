@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-import { RocketLaunchOutlined,FavoriteBorder, ShoppingCartOutlined, Home } from "@mui/icons-material";
+import { RocketLaunchOutlined,FavoriteBorder, ShoppingCartOutlined, } from "@mui/icons-material";
 
 import {
   AppBar,
@@ -16,6 +16,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import { ProductDataContext } from "../../contexts/Data/ProductDataContext";
 
 const getActiveStyle = ({ isActive }) => ({
   padding: isActive ? "0.5rem" : "0.5rem",
@@ -54,6 +55,7 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 export const Header = () => {
   const [open, setOpen] = useState(false);
+  const { state } = useContext(ProductDataContext);
   return (
     <>
       <AppBar position="sticky">
@@ -80,13 +82,13 @@ export const Header = () => {
             Explore
           </Typography>
             </NavLink>
-            <NavLink style={getActiveStyle}>
-            <Badge badgeContent={4} color="error">
+            <NavLink style={getActiveStyle} to="/wishlist"> 
+            <Badge badgeContent={state?.wishlist.length} color="error">
               <FavoriteBorder />
             </Badge>
             </NavLink>
-            <NavLink style={getActiveStyle}>
-            <Badge badgeContent={2} color="error">
+            <NavLink style={getActiveStyle} to="/cart">
+            <Badge badgeContent={state?.cart.length} color="error">
               <ShoppingCartOutlined />
             </Badge>
             </NavLink>
