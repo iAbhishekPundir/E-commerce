@@ -18,6 +18,7 @@ export const initialState = {
 };
 
 export const productReducer = (state, action) => {
+  const { wishlist,  cart} = state;
   switch (action.type) {
     case "INITIALIZE_CATEGORIES":
       console.log(action.payload);
@@ -28,9 +29,13 @@ export const productReducer = (state, action) => {
     case "FETCH_ERROR":
       return { ...state, isLoading: false, error: action.payload };
     case "ADD_TO_CART":
-      const addedProduct = state.products.find((product)=> product.id === action.payload);
-      console.log(addedProduct);
-      return {...state, cart: addedProduct}
+      const addedCartProduct = state.products.find((product)=> product.id === action.payload);
+      console.log(addedCartProduct);
+      return {...state, cart: [...cart, addedCartProduct]};
+    case "ADD_TO_WISHLIST":
+      const addedWishlistProduct = state.products.find((product)=> product.id === action.payload);
+      console.log(addedWishlistProduct);
+      return {...state, wishlist: [...wishlist, addedWishlistProduct]}
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
   }

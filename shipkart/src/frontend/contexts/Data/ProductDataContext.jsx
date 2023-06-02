@@ -54,7 +54,7 @@ export const ProductDataProvider = ( {children}) => {
 
   return (
     <>
-        <ProductDataContext.Provider value={{state}}>
+        <ProductDataContext.Provider value={{state, dispatch}}>
             {children}
         </ProductDataContext.Provider>
     </>

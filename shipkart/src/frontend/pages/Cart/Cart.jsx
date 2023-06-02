@@ -14,24 +14,16 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
   
-export const ProductListing = () => {
 
-    const {state} = useContext(ProductDataContext);
-
-    if(state.isLoading) {
-        return <p>Loading...</p>
-    }
-    if(state.error) {
-        return <p>Not found...</p>
-    }
-
+export const Cart = () => {
+  const {state} = useContext(ProductDataContext);
   return (
     <>
     {
-        state?.products && 
+        state?.cart && 
             <Grid container >
             {
-                state?.products.map((product)=>(
+                state?.cart.map((product)=>(
                     <Grid item xs={12} sm={6} md={4} lg={2} key={product.id}>
                         <ProductCard product={product}/>
                     </Grid>
